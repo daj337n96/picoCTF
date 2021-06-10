@@ -1,1 +1,4 @@
-#   picooooooooooooooooooooooooCTF
+# picoCTF 
+
+First we see the START STOP variable ensuring that the key length is always constant.
+
