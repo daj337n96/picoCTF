@@ -1,0 +1,7 @@
+use binwalk -e -M <filename> to recursively extract the files 
+
+first extraction shows the directory "base_images/2_c.jpg"
+
+recursive extration woiuld reveal the flag.txt file 
+
+using cat flag.txt would reveal the flag "picoCTF{4cf7ac000c3fb0fa96fb92722ffb2a32}"
