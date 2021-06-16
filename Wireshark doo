@@ -1,0 +1,5 @@
+Using Wireshark to foloow the TCP streams --> tcp.stream,we follow the green highlighted ones to realise that stream #5 shows a HTTP response with text/html.
+There we see "cvpbPGS{c33xno00_1_f33_h_qrnqorrs}" at the very end of the response.
+
+In the terminal using --> echo "cvpbPGS{c33xno00_1_f33_h_qrnqorrs}" | caesar 13, we decode the flag with ROT13 to get picoCTF{p33kab00_1_s33_u_deadbeef}.
+
