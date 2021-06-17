@@ -1,0 +1,52 @@
+Upon accessing the site under the What tab, we see the obvious clue that HTML, CSS, & JS is used to make the site.
+Inspecting the HTML code gives us the first flag! "picoCTF{t"
+#####################################################################################################################################
+
+
+Next we check the css file and there we find the second flag! "h4ts_4_l0"
+#####################################################################################################################################
+
+
+We now check the JS script only to find a clue "/* How can I keep Google from indexing my website? */".
+Googling it leads to an option robots.txt. 
+
+"The first way to remove a page from search engine results is by adding a robots.txt file to your site. The advantage of using this method is that you can get more control over what you are allowing bots to index. 
+This means you can proactively keep unwanted content out of the search results."
+
+Therefore, we know that adding the extension should lead us to our thrid flag. And we were right! 
+This is what we get: 
+"User-agent: *
+Disallow: /index.html
+# Part 3: t_0f_pl4c
+# I think this is an apache server... can you Access the next flag?"
+#####################################################################################################################################
+
+
+Next we get a clue about an apache server. After some goolging dor answers it was apparent that the extension .htaccess would reveal the fourth flag.
+.htaccess: (definition)
+"htaccess is a configuration file for use on web servers running the Apache Web Server software. 
+When a .htaccess file is placed in a directory which is in turn 'loaded via the Apache Web Server', then the .htaccess file is detected and executed by the Apache Web Server software. 
+These .htaccess files can be used to alter the configuration of the Apache Web Server software to enable/disable additional functionality and features that the Apache Web Server software has to offer. 
+These facilities include basic redirect functionality, for instance if a 404 file not found error occurs, or for more advanced functions such as content password protection or image hot link prevention."
+
+Accessing the page shows us:
+"# Part 4: 3s_2_lO0k
+# I love making websites on my Mac, I can Store a lot of information there."
+#####################################################################################################################################
+
+
+The 5th f;ag can be found with the clue "# I love making websites on my Mac, I can Store a lot of information there."
+This is referring to .DS_Store used by mac.
+.DS_Store: (wiki definition)
+In the Apple macOS operating system, .DS_Store is a file that stores custom attributes of its containing folder, such as the position of icons or the choice of a background image.
+The name is an abbreviation of Desktop Services Store, reflecting its purpose. 
+It is created and maintained by the Finder application in every folder, and has functions similar to the file desktop.ini in Microsoft Windows. 
+Starting with a period . character, it is hidden in Finder and many Unix utilities. Its internal structure is proprietary, but has since been reverse-engineered. 
+Starting at macOS 10.12 16A238m, Finder will not display .DS_Store files (even with com.apple.finder AppleShowAllFiles YES set).
+
+This is what we see: "Congrats! You completed the scavenger hunt. Part 5: _35844447}"
+And yes we found our last flag! " _35844447}"
+#####################################################################################################################################
+
+
+FLAG: picoCTF{th4ts_4_l0t_0f_pl4cs_2_lO0k_35844447}
