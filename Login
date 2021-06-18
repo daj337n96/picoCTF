@@ -1,0 +1,7 @@
+Checking the source code reveals a javascript which looks suspicious.
+We see: 
+"return "YWRtaW4" !== t.u ? alert("Incorrect Username") : "cGljb0NURns1M3J2M3JfNTNydjNyXzUzcnYzcl81M3J2M3JfNTNydjNyfQ" !== t.p ? alert("Incorrect Password") : void alert(`Correct Password! Your flag is ${atob(t.p)}.`)"
+
+The code tells us that the page compares the string to the password "cGljb0NURns1M3J2M3JfNTNydjNyXzUzcnYzcl81M3J2M3JfNTNydjNyfQ"(base64 has caps, non-caps, #, +/).
+So using cyberchef we tried changing the string from base64 to string and we got it! 
+Flag: picoCTF{53rv3r_53rv3r_53rv3r_53rv3r_53rv3r}
