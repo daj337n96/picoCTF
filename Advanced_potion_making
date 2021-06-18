@@ -1,0 +1,8 @@
+Using strings <filename>, we see "IHDR" at the start and "IEND" at the end. This means that we are dealing with a png file.
+However, the file is currupted so oening it gives us an error.
+
+https://stackoverflow.com/questions/54845745/not-able-to-read-ihdr-chunk-of-a-png-file
+This site shows us the standard that a png file header should follow. Using hexedit we changed the header and the file was restored.
+
+Next since this is an image file, we can use stegsolve to reveal the flag, and we got it! 
+Flag: picoCTF{w1z4rdry}
