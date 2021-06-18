@@ -1,0 +1,9 @@
+Using a hex editor shows us BM at the start meanning this is s BMP file. 
+BMP file header:
+http://www.ece.ualberta.ca/~elliott/ee552/studentAppNotes/2003_w/misc/bmp_file_format/bmp_file_format.htm
+
+Since the image cannot be opened, we can use an online photo editor(photopea).
+
+We can see that the image has a 2Mb size for such a small image, with the BMP header info, we can edit the height at 16h offset.
+After playing around with the height, we found the flag!
+Flag:picoCTF{qu1t3_a_v13w_2020}
